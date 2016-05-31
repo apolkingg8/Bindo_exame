@@ -185,4 +185,24 @@ body, html {
     padding-left: 10px;
     line-height: 50px; }
 
+.content-page {
+  flex: 1; }
+  .content-page .content-page__title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bolder; }
+  .content-page .content-page__body {
+    display: flex;
+    flex-direction: column; }
+    .content-page .content-page__body .content-page__body-top {
+      display: flex;
+      flex-direction: row; }
+      .content-page .content-page__body .content-page__body-top .content-page__body-left {
+        flex: 1; }
+      .content-page .content-page__body .content-page__body-top .content-page__body-right {
+        flex: 1; }
+    .content-page .content-page__body .content-page__body-bottom {
+      height: 100px; }
+
 /*# sourceMappingURL=app.css.map */

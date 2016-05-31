@@ -37065,6 +37065,10 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
+	var _InputWithTitle = __webpack_require__(177);
+
+	var _InputWithTitle2 = _interopRequireDefault(_InputWithTitle);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37091,8 +37095,39 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'content Inventory' },
-	                'Inventory'
+	                { className: 'content-page' },
+	                _react2.default.createElement(
+	                    'h1',
+	                    { className: 'content-page__title' },
+	                    'Inventory #123'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'content-page__body' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'content-page__body-top' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'content-page__body-left' },
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'content-page__body-right' },
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+	                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'content-page__body-bottom' },
+	                        _react2.default.createElement(_InputWithTitle2.default, { title: '123', type: 'textarea' })
+	                    )
+	                )
 	            );
 	        }, _temp), _possibleConstructorReturn(_this, _ret);
 	    }
@@ -37103,6 +37138,85 @@
 	exports.default = Inventory;
 
 	//# sourceMappingURL=Inventory.js.map
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(174);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var InputWithTitle = function (_React$Component) {
+	    _inherits(InputWithTitle, _React$Component);
+
+	    function InputWithTitle() {
+	        var _Object$getPrototypeO;
+
+	        var _temp, _this, _ret;
+
+	        _classCallCheck(this, InputWithTitle);
+
+	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	            args[_key] = arguments[_key];
+	        }
+
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(InputWithTitle)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.render = function () {
+
+	            if (_this.props.type === "textarea") {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: 'input' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'input__title' },
+	                        _this.props.title
+	                    ),
+	                    _react2.default.createElement('textarea', null)
+	                );
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'input' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'input__title' },
+	                    _this.props.title
+	                ),
+	                _react2.default.createElement('input', { type: _this.props.type })
+	            );
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    }
+
+	    return InputWithTitle;
+	}(_react2.default.Component);
+
+	InputWithTitle.defaultProps = {
+	    type: "text",
+	    title: ""
+	};
+	exports.default = InputWithTitle;
+
+	//# sourceMappingURL=InputWithTitle.js.map
 
 /***/ }
 /******/ ]);

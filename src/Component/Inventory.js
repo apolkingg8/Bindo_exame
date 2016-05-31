@@ -12,6 +12,10 @@ var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
+var _InputWithTitle = require('./InputWithTitle');
+
+var _InputWithTitle2 = _interopRequireDefault(_InputWithTitle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38,8 +42,39 @@ var Inventory = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'content Inventory' },
-                'Inventory'
+                { className: 'content-page' },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'content-page__title' },
+                    'Inventory #123'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'content-page__body' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content-page__body-top' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'content-page__body-left' },
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'content-page__body-right' },
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' }),
+                            _react2.default.createElement(_InputWithTitle2.default, { title: '123' })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content-page__body-bottom' },
+                        _react2.default.createElement(_InputWithTitle2.default, { title: '123', type: 'textarea' })
+                    )
+                )
             );
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
